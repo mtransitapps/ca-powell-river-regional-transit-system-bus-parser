@@ -13,7 +13,8 @@ import java.util.regex.Pattern;
 import static org.mtransit.commons.StringUtils.EMPTY;
 
 // https://www.bctransit.com/open-data
-// https://www.bctransit.com/data/gtfs/powell-river.zip
+// OLD: https://www.bctransit.com/data/gtfs/powell-river.zip
+// TODO: https://bct.tmix.se/gtfs-realtime/alerts.pb?operatorIds=29
 public class PowellRiverRegionalTransitSystemBusAgencyTools extends DefaultAgencyTools {
 
 	public static void main(@NotNull String[] args) {
