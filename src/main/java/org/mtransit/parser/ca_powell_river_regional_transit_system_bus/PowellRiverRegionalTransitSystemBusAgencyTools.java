@@ -72,12 +72,13 @@ public class PowellRiverRegionalTransitSystemBusAgencyTools extends DefaultAgenc
 		case "1": return "17468B";
 		case "2": return "80CC28";
 		case "3": return "ED0790";
+		case "9": return "F298C1";
 		case "12": return "00ADEF";
 		case "13": return "A32B9B";
 		case "14": return "FBBD09";
 		// @formatter:on
 		}
-		throw new MTLog.Fatal("Unexpected route color for %s!", gRoute);
+		throw new MTLog.Fatal("Unexpected route color for %s!", gRoute.toStringPlus());
 	}
 
 	@Override
