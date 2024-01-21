@@ -13,8 +13,6 @@ import java.util.regex.Pattern;
 import static org.mtransit.commons.StringUtils.EMPTY;
 
 // https://www.bctransit.com/open-data
-// OLD: https://www.bctransit.com/data/gtfs/powell-river.zip
-// TODO: https://bct.tmix.se/gtfs-realtime/alerts.pb?operatorIds=29
 public class PowellRiverRegionalTransitSystemBusAgencyTools extends DefaultAgencyTools {
 
 	public static void main(@NotNull String[] args) {
@@ -45,7 +43,12 @@ public class PowellRiverRegionalTransitSystemBusAgencyTools extends DefaultAgenc
 
 	@Override
 	public boolean useRouteShortNameForRouteId() {
-		return true;
+		return false; // route ID used by GTFS RT
+	}
+
+	@Override
+	public @Nullable String getRouteIdCleanupRegex() {
+		return "\\-[A-Z]+$";
 	}
 
 	@Override
